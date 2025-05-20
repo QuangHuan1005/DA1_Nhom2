@@ -1,5 +1,7 @@
 <?php
 
+require_once 'models/ProductModel.php';
+
 class ProductController{
   private $productModel;
   

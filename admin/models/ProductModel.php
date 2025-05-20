@@ -8,12 +8,7 @@ class ProductModel{
   }
 
   public function get_list(){
-      $sql = "SELECT 
-                  id, 
-                  name, 
-                  price, 
-                  quantity
-              FROM products";
+          $sql = "SELECT id, category_id, name, description, price, stock_quantity, image_url FROM products";
       $data = $this->conn->prepare($sql);
       $data->execute();
       return $data->fetchAll(PDO::FETCH_ASSOC);
